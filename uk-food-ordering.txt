@@ -1,0 +1,72 @@
+! Title: UK food ordering blocklist
+! Description: Blocks takeaway and convenience delivery ordering in the UK:
+!   the big marketplaces AND the platforms local takeaways use for their own
+!   branded websites and apps. For anyone who wants to stop ordering food.
+! Homepage: https://github.com/myredroom/uk-food-ordering-blocklist
+! License: CC0-1.0
+!
+! Format: ||domain^ blocks the domain and every subdomain
+! (Pi-hole v6, AdGuard Home, uBlock Origin).
+!
+! Approach: block PLATFORMS, not individual takeaways. A takeaway with its own
+! web address almost always takes the order through one of the platforms
+! below, so one platform entry covers hundreds of takeaways.
+! Never add payment processors (Stripe, Adyen, PayPal...): that would break
+! all online shopping.
+
+! --- Marketplaces ---
+! Just Eat (Just Eat Takeaway.com)
+||just-eat.co.uk^
+||just-eat.com^
+||justeat.co.uk^
+||justeat.com^
+||takeaway.com^
+! Deliveroo
+||deliveroo.co.uk^
+||deliveroo.com^
+||deliveroo.net^
+! Uber Eats (Uber taxis use uber.com: deliberately NOT blocked)
+||ubereats.com^
+! Smaller marketplaces
+||kukd.com^
+||hungrypanda.co^
+
+! --- Takeaway ordering platforms (own-branded sites and apps) ---
+! Hungrrr: takeaways appear as <name>.hungrrr.co.uk
+||hungrrr.co.uk^
+||hungrrr.com^
+! Flipdish: takeaways use their own web addresses; ordering via api.flipdish.co
+||flipdish.com^
+||flipdish.co^
+! Foodhub / Touch2Success
+||foodhub.co.uk^
+||foodhub.com^
+||touch2success.com^
+! Yoyumm
+||yoyumm.com^
+! ChefOnline
+||chefonline.co.uk^
+||chefonline.com^
+! MenuDock
+||menudock.co.uk^
+! Order Now
+||ordernow.dev^
+! Slerp
+||slerp.com^
+! OrderYOYO
+||orderyoyo.com^
+||orderyoyo.co.uk^
+
+! --- Convenience store / rapid grocery delivery ---
+! Gopuff
+||gopuff.com^
+! Snappy Shopper: local shops (Premier, Costcutter, One Stop, Nisa, Co-op...)
+||snappyshopper.co.uk^
+! Beelivery
+||beelivery.com^
+! Co-op's own delivery shop ONLY (coop.co.uk itself stays: membership etc.)
+||shop.coop.co.uk^
+! NOT blockable by DNS: Tesco Whoosh lives inside tesco.com and the Tesco app,
+! so blocking it would break Tesco altogether.
+! Do not add zapp.com: it is an unrelated German steel firm (Zapp the UK
+! delivery service used zapp.co.uk, which no longer resolves).
