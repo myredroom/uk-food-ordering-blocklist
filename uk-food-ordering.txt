@@ -24,11 +24,13 @@
 ||just-eat.io^
 ||je-apis.com^
 ||jet-external.com^
+||justeattakeaway.com^
 ||just-eat-prod-eu-res.cloudinary.com^
 ! Deliveroo
 ||deliveroo.co.uk^
 ||deliveroo.com^
 ||deliveroo.net^
+||roocdn.com^
 ! Uber Eats (Uber taxis use uber.com: deliberately NOT blocked)
 ||ubereats.com^
 ! Smaller marketplaces
