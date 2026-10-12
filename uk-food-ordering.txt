@@ -31,6 +31,9 @@
 ||deliveroo.com^
 ||deliveroo.net^
 ||roocdn.com^
+! Deliveroo is owned by DoorDash; its app calls DoorDash's API gateway
+||dashapi.com^
+||doordash.com^
 ! Uber Eats (Uber taxis use uber.com: deliberately NOT blocked)
 ||ubereats.com^
 ! Smaller marketplaces
