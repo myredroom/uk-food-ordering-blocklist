@@ -21,6 +21,10 @@
 ||justeat.co.uk^
 ||justeat.com^
 ||takeaway.com^
+||just-eat.io^
+||je-apis.com^
+||jet-external.com^
+||just-eat-prod-eu-res.cloudinary.com^
 ! Deliveroo
 ||deliveroo.co.uk^
 ||deliveroo.com^
