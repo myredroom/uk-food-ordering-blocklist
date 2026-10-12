@@ -9,6 +9,6 @@ git add uk-food-ordering.txt README.md
 git commit -m "$msg"
 git push -q
 tag="v$(date +%Y.%m.%d)"
-git tag -l "$tag" | grep -q . && tag="$tag.$(date +%H%M)"
+gh release view "$tag" >/dev/null 2>&1 && tag="$tag.$(date +%H%M)"
 gh release create "$tag" uk-food-ordering.txt --title "$tag" --notes "$msg"
 echo "published $tag"
